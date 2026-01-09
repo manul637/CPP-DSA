@@ -6,7 +6,10 @@ int main() {
 
     // brute force approch O(n^2)
     vector<int> nums = {4,1,2,1,2};
-    
+
+    cout << "Single number is: " << singleNumber(nums) << endl;
+    return 0;
+}
 
 int singleNumber(vector<int>& nums) {
     for(int i = 0; i < nums.size(); i++) {
@@ -20,7 +23,7 @@ int singleNumber(vector<int>& nums) {
         if(isUnique) {                             //still unique after inner loop
             return nums[i];                        
         }
-        }
+    }
     return -1; // This line should never be reached if input is valid
 }
 
@@ -31,8 +34,7 @@ int singleNumber(vector<int>& nums) {
             ans ^= num;   // XOR operation
         }
         return ans;
-    }
 
-
+    // other inefficient mehtodes - hash map , hash set , sorting , mathematical . 
     
 }
